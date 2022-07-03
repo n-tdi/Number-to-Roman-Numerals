@@ -11,8 +11,8 @@ fn convert_num_to_roman(mut num: u32) -> String {
     for i in 0..values.len() {
         while num >= values[i] {
             num = num - values[i];
-            ending = ending.to_owned() + roman_letters[i];
+            ending.push_str(roman_letters[i]);
         }
     }
-    return ending;
+    ending
 }
